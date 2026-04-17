@@ -3,30 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TableGameApp2.Data
 {
-    internal class Status
+    public class Status
     {
-        String _statusName;
-        String _statusValue;
+        //Note: you need to declare member variables/their setters/getters like this for you to be able to 
+        //bind listViews' column's to them
+        public String statusName { get; set; }
+        public String statusValue { get; set; }
         public Status() 
         {
-            _statusName = "";
-            _statusValue = "";
+            statusName = "";
+            statusValue = "";
         }
 
         public Status(String statusName, String statusValue)
         {
-            _statusName = statusName;
-            _statusValue = statusValue;
+            this.statusName = statusName;
+            this.statusValue = statusValue;
         }
-
-        public String getStatusName() { return _statusName; }
-        public void setStatusName(String statusName) { _statusName = statusName; }
-        
-        public String getStatusValue() { return _statusValue; }
-        public void setStatusValue(String statusValue) { _statusValue = statusValue; }
-
     }
 }

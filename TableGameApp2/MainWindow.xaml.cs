@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 
 using TableGameApp2.Navigation;
 using TableGameApp2.Pages;
+using TableGameApp2.Model;
 namespace TableGameApp2
 {
     /// <summary>
@@ -25,8 +26,9 @@ namespace TableGameApp2
         public MainWindow()
         {
             InitializeComponent();
+            Model.Model.loadHeroes();
             Navigator.Initialize(MainWindowFrame);
-            Navigator.openWindow("MainPage");
+            Navigator.openPage("MainPage");
         }
 
 

@@ -5,13 +5,13 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TableGameApp2.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="1000"
       Title="MainPage">
 
     <Grid>
-        <Button Click = "openWindow"  Name = "CreateArmy"  Content="Create Army" HorizontalAlignment="Left" Margin="181,42,0,0" VerticalAlignment="Top" Height="60" Width="474"/>
-        <Button Click = "openWindow" Name = "CreateHero" Content="Create Hero" HorizontalAlignment="Left" Margin="181,132,0,0" VerticalAlignment="Top" Height="60" Width="474"/>
-        <Button Click = "openWindow" Name = "EditHero" Content="Edit Hero" HorizontalAlignment="Left" Margin="181,217,0,0" VerticalAlignment="Top" Height="60" Width="474"/>
-        <Button Click = "openWindow" Name = "PlayGame" Content="Play Game" HorizontalAlignment="Left" Margin="181,308,0,0" VerticalAlignment="Top" Height="60" Width="474"/>
+        <Button Click = "openWindow"  Name = "CreateArmy"  Content="Create Army" HorizontalAlignment="Left" Margin="181,42,0,0" VerticalAlignment="Top" Height="60" Width="638"/>
+        <Button Click = "openWindow" Name = "CreateHero" Content="Create Hero" HorizontalAlignment="Left" Margin="181,132,0,0" VerticalAlignment="Top" Height="60" Width="638"/>
+        <Button Click = "openWindow" Name = "EditHero" Content="Edit Hero" HorizontalAlignment="Left" Margin="181,217,0,0" VerticalAlignment="Top" Height="60" Width="638"/>
+        <Button Click = "openWindow" Name = "PlayGame" Content="Play Game" HorizontalAlignment="Left" Margin="181,308,0,0" VerticalAlignment="Top" Height="60" Width="638"/>
     </Grid>
 </Page>

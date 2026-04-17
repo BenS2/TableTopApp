@@ -19,7 +19,7 @@ namespace TableGameApp2.Navigation
             _mainFrame = mainFrame;
         }
 
-        public static void openWindow(string name)
+        public static void openPage(string name)
         {
             if (name == "CreateArmy")
                 _mainFrame.Navigate(new CreateArmyPage());

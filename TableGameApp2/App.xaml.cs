@@ -17,10 +17,6 @@ namespace TableGameApp2
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
-            // Initialize the navigation service with the main frame
-            //Navigator.Initialize(MainWindow.MainWindowFrame);
-            
-            // Other startup logic
         }
     }
 }

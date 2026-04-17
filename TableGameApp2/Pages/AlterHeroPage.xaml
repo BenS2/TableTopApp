@@ -4,23 +4,23 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:TableGameApp2.Pages"
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="CreateHeroPage">
+      mc:Ignorable="d" d:DesignWidth="900"
+      Title="CreateHeroPage" Height="676">
 
-    <Grid>
-        <TextBox HorizontalAlignment="Left" Margin="280,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+    <Canvas Margin="0,0,10,0">
+        <TextBox Name="HeroName" HorizontalAlignment="Left" Margin="280,48,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Hero's Name" HorizontalAlignment="Left" Margin="172,48,0,0" VerticalAlignment="Top"/>
-        <ListView d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,79,524,130" Name ="StatusesList">
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn Header="Status Name" DisplayMemberBinding="{Binding Test1}" />
-                    <GridViewColumn Header="Status Value" DisplayMemberBinding="{Binding Test2}" />
-                </GridView>
-            </ListView.View>
-        </ListView>
         <Label Content="Select Hero" Name = "SelectHeroLabel"  HorizontalAlignment="Left" Margin="173,22,0,0" VerticalAlignment="Top" Width="78"/>
-        <ComboBox HorizontalAlignment="Left" Name = "SelectHeroCombo"  Margin="280,22,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox SelectionChanged="selectHero" HorizontalAlignment="Left" Name = "SelectHeroCombo"  Margin="280,22,0,0" VerticalAlignment="Top" Width="120"/>
+        <DataGrid Name ="StatusesGrid"  Margin="26,79,474,397" SelectionUnit="Cell" AutoGenerateColumns = "False" MaxWidth="650" Width="400" Height="200">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Status Name" Binding = "{Binding statusName}"  />
+                <DataGridTextColumn Header="Status Value" Binding = "{Binding statusValue}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="SaveHero" Content="Save Hero" Click = "OnSaveHero" HorizontalAlignment="Left" VerticalAlignment="Center" Width="165" RenderTransformOrigin="0.481,6.78" Height="46" Canvas.Left="426" Canvas.Top="284"/>
+        <TextBox Name = "HeroNotes" AcceptsReturn="True" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Height="208" Canvas.Left="590" Canvas.Top="71"/>
+        <Label Content="Hero Notes" Canvas.Left="590" Canvas.Top="44" RenderTransformOrigin="-0.553,0.327" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
-    </Grid>
+    </Canvas>
 </Page>

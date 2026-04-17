@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TableGameApp2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="1000">
 
     <Grid Name="MainWindowGrid">
-        <Frame Name="MainWindowFrame" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Frame Name="MainWindowFrame" Margin="0,0,-333,0" Grid.ColumnSpan="2" >
         </Frame>
-        
+
     </Grid>
-    
+
 </Window>

@@ -30,7 +30,7 @@ namespace TableGameApp2.Pages
         {
 
             string name = ((FrameworkElement)e.Source).Name;
-            Navigator.openWindow(name);
+            Navigator.openPage(name);
         }
     }
 }

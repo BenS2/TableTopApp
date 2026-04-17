@@ -4,36 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Collections.ObjectModel;
+using System.Xml.Serialization;
+
 namespace TableGameApp2.Data
 {
     public class Hero
     {
-        String _name;
-        /*ObservableCollection<Status> _statuses;*/
-        String _notes;
-
+        public String _name { get; set; }
+        public List<Status> _statuses { get; set; }
+        public String _notes { get; set; }
         public Hero()
         {
             _name = "";
             _notes = "";
-           //_statuses = new ObservableCollection<Status>();
+           _statuses = new List<Status>();
         }
 
-        public Hero(string name, /*ObservableCollection<Status> statuses,*/ string notes)
+        public Hero(string name, List<Status> statuses, string notes)
         {
             _name = name;
-            //_statuses = statuses;
+            _statuses = statuses;
             _notes = notes;
         }
 
 
-        public String getName() { return _name; }
-        //public ObservableCollection<Status> getStatuses() { return _statuses; }
-        public String getNotes() { return _notes; }
-
-        public void setName(String name) { _name = name; }
-        //public void setStatuses(ObservableCollection<Status> statuses) { _statuses = statuses; }
-        public void setNotes(String notes) { _notes = notes; }
+        public List<Status> getStatuses() { return _statuses; }
+        public void setStatuses(List<Status> statuses) { _statuses = statuses; }
 
     }
 }

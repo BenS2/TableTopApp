@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataAccessors\XMLAccessor.cs" />
     <Compile Include="Data\Hero.cs" />
     <Compile Include="Data\Status.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -87,6 +88,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Model.cs" />
     <Compile Include="Navigation\Navigator.cs" />
     <Compile Include="Pages\CreateArmyPage.xaml.cs">
       <DependentUpon>CreateArmyPage.xaml</DependentUpon>
