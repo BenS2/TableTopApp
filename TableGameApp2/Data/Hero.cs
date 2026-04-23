@@ -27,7 +27,34 @@ namespace TableGameApp2.Data
             _notes = notes;
         }
 
+        public static bool operator ==(Hero obj1, Hero obj2)
+        {
+            if (obj1 is null && obj2 is null)
+                return true;
+            if(obj1 is null && (obj2 is null) == false)
+                return false;
+            if ((obj1 is null) == false && obj2 is null)
+                return false;
+            if (obj1._notes != obj2._notes)
+                return false;
+            if (obj1._name != obj2._name)
+                return false;
+            if (obj1._statuses.SequenceEqual(obj2._statuses) == false)
+                return false;
+            else
+                return true;
 
+        }
+
+        public static bool operator !=(Hero obj1, Hero obj2)
+        {
+            return (obj1 == obj2) == false;
+        }
+
+        public override bool Equals(object other)
+        {
+            return other is Hero && this == (Hero)other;
+        }
         public List<Status> getStatuses() { return _statuses; }
         public void setStatuses(List<Status> statuses) { _statuses = statuses; }
 

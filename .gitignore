@@ -13,3 +13,11 @@ TableGameApp2/obj/Debug/TableGameApp2_MarkupCompile.i.cache
 TableGameApp2/obj/Debug/TableGameApp2_MarkupCompile.cache
 TableGameApp2/obj/Debug/TableGameApp2.exe
 TableGameApp2/bin/Debug/TableGameApp2.exe
+/TableGameAppTests/obj/Release
+/TableGameAppTests/obj
+/TableGameAppTests/bin/Release
+/TableGameAppTests/bin
+/TableGameApp2/obj
+/TableGameApp2/.vs
+TableGameApp2/bin/Debug/TableGameApp2.exe
+TableGameApp2/bin/Debug/testHeroStatus.xml

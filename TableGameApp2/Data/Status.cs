@@ -24,5 +24,32 @@ namespace TableGameApp2.Data
             this.statusName = statusName;
             this.statusValue = statusValue;
         }
+
+        public static bool operator ==(Status obj1, Status obj2)
+        {
+            if (obj1 is null && obj2 is null)
+                return true;
+            if (obj1 is null && (obj2 is null) == false)
+                return false;
+            if ((obj1 is null) == false && obj2 is null)
+                return false;
+            if (obj1.statusName != obj2.statusName)
+                return false;
+            if (obj1.statusValue != obj2.statusValue)
+                return false;
+            else
+                return true;
+
+        }
+
+        public static bool operator !=(Status obj1, Status obj2)
+        {
+            return (obj1 == obj2) == false;
+        }
+
+        public override bool Equals(object other)
+        {
+            return other is Status && this == (Status)other;
+        }
     }
 }

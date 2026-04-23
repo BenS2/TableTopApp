@@ -6,7 +6,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Navigation;
+using TableGameApp2.Data;
+using TableGameApp2.DataAccessors;
 using TableGameApp2.Navigation;
+
 namespace TableGameApp2
 {
     /// <summary>

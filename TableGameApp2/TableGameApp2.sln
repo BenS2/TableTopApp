@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableGameApp2", "TableGameApp2.csproj", "{5542F521-0E31-4C5B-96AF-AFE6FA1167ED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TableGameAppTests", "..\TableGameAppTests\TableGameAppTests.csproj", "{4C204489-07BC-4908-B724-870B5C3C3063}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{5542F521-0E31-4C5B-96AF-AFE6FA1167ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5542F521-0E31-4C5B-96AF-AFE6FA1167ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5542F521-0E31-4C5B-96AF-AFE6FA1167ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C204489-07BC-4908-B724-870B5C3C3063}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C204489-07BC-4908-B724-870B5C3C3063}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C204489-07BC-4908-B724-870B5C3C3063}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C204489-07BC-4908-B724-870B5C3C3063}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,7 +12,7 @@ namespace TableGameApp2.DataAccessors
 {
     public static class XMLAccessor
     {
-        public static bool NewLineOnAttributes { get; set; }
+        public static String _heroStatsFileName = "heroStats.xml";
 
         /// <summary>
         /// used to save a list of heros to the local xml file
@@ -24,7 +24,7 @@ namespace TableGameApp2.DataAccessors
             string workingDirectory = Environment.CurrentDirectory;
           
             XmlSerializer serialiser = new XmlSerializer(typeof(List<Hero>));
-            FileStream stream = File.OpenWrite(Environment.CurrentDirectory + "\\heroStats.xml");
+            FileStream stream = File.OpenWrite(Environment.CurrentDirectory + "\\" + _heroStatsFileName);
             serialiser.Serialize(stream, heroes);
             stream.Dispose();
             return "";
@@ -37,8 +37,8 @@ namespace TableGameApp2.DataAccessors
         public static List<Hero> loadHeroes()
         {
             XmlSerializer serialiser = new XmlSerializer(typeof(List<Hero>));
-            FileStream streamRead = File.OpenRead(Environment.CurrentDirectory + "\\heroStats.xml");
-            var result = (List<Hero>)(serialiser.Deserialize(streamRead));
+            FileStream streamRead = File.OpenRead(Environment.CurrentDirectory + "\\" + _heroStatsFileName);
+            List<Hero> result = (List<Hero>)(serialiser.Deserialize(streamRead));
             return result;
         }
     }

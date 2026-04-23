@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-C:\Users\Benja\source\repos\TableGameApp2\obj\Debug\
+C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\
 TableGameApp2
 none
 false
 DEBUG;TRACE
-C:\Users\Benja\source\repos\TableGameApp2\App.xaml
+C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\App.xaml
 5313549003
 
-131564115002
+151632799212
 13-1310406943
 MainWindow.xaml;Pages\CreateArmyPage.xaml;Pages\AlterHeroPage.xaml;Pages\MainPage.xaml;Pages\PlayGamePage.xaml;
 

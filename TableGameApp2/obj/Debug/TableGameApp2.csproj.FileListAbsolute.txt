@@ -21,9 +21,6 @@ C:\Users\Benja\source\repos\TableGameApp2\obj\Debug\Pages\PlayGamePage.g.cs
 C:\Users\Benja\source\repos\TableGameApp2\obj\Debug\Pages\CreateArmyPage.baml
 C:\Users\Benja\source\repos\TableGameApp2\obj\Debug\Pages\AlterHeroPage.baml
 C:\Users\Benja\source\repos\TableGameApp2\obj\Debug\Pages\PlayGamePage.baml
-C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.exe.config
-C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.exe
-C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.pdb
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\TableGameApp2.csproj.AssemblyReference.cache
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\MainWindow.g.cs
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\Pages\CreateArmyPage.g.cs
@@ -33,6 +30,9 @@ C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\Pages\PlayGamePa
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\App.g.cs
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\TableGameApp2_MarkupCompile.cache
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\TableGameApp2_MarkupCompile.lref
+C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.exe.config
+C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.exe
+C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\bin\Debug\TableGameApp2.pdb
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\MainWindow.baml
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\Pages\CreateArmyPage.baml
 C:\Users\Benja\source\repos\TableTopApp\TableGameApp2\obj\Debug\Pages\AlterHeroPage.baml

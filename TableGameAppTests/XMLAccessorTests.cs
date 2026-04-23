@@ -1,0 +1,54 @@
+﻿using TableGameApp2.Data;
+using TableGameApp2.DataAccessors;
+using System.Linq;
+
+namespace TableGameAppTests
+{
+    [TestClass]
+    public class XMLAccessorTests
+    {
+        [TestMethod]
+        public void saveAndLoadHeroesCorrectly()
+        {
+
+            //Arrange
+            XMLAccessor._heroStatsFileName = "testHeroStatus.xml";
+            List<Status> statuses = new List<Status>();
+            statuses.Add(new Status("Might", "3"));
+            statuses.Add(new Status("Will", "2"));
+
+            Hero hero = new Hero("Aragorn", statuses, "Has the Mighty Hero special rule");
+
+            List<Hero> expectedHeroes = new List<Hero>();
+            expectedHeroes.Add(hero);
+            //Act
+            XMLAccessor.saveHeroes(expectedHeroes);
+            List<Hero> actualHeroes = XMLAccessor.loadHeroes();
+            bool heroesEqual = true;
+
+            heroesEqual = expectedHeroes.SequenceEqual(actualHeroes);
+
+            Assert.IsTrue(heroesEqual, "Failed to save or load heroes");
+            //Assert
+            //Assert.AreEqual(expectedHeroes, actualHeroes, "Failed to save or load heroes");
+
+            /*if (expectedHeroes.Count == actualHeroes.Count)
+            {
+                for (int i = 0; i < expectedHeroes.Count; i++)
+                {
+                    if (expectedHeroes[i] != actualHeroes[i])
+                    {
+                        heroesEqual = false;
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                heroesEqual = false;
+            }
+            
+            Assert.IsTrue(heroesEqual, "Failed to save or load heroes");*/
+        }
+    }
+}
