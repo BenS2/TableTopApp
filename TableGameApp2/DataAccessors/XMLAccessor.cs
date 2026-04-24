@@ -37,8 +37,16 @@ namespace TableGameApp2.DataAccessors
         public static List<Hero> loadHeroes()
         {
             XmlSerializer serialiser = new XmlSerializer(typeof(List<Hero>));
+            if(!File.Exists(Environment.CurrentDirectory + "\\" + _heroStatsFileName))
+            {
+                FileStream stream = File.OpenWrite(Environment.CurrentDirectory + "\\" + _heroStatsFileName);
+                serialiser.Serialize(stream, new List<Hero>());
+                stream.Dispose();
+            }
+             
             FileStream streamRead = File.OpenRead(Environment.CurrentDirectory + "\\" + _heroStatsFileName);
             List<Hero> result = (List<Hero>)(serialiser.Deserialize(streamRead));
+            streamRead.Dispose();
             return result;
         }
     }

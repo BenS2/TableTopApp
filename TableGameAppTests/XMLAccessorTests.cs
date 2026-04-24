@@ -28,27 +28,8 @@ namespace TableGameAppTests
 
             heroesEqual = expectedHeroes.SequenceEqual(actualHeroes);
 
-            Assert.IsTrue(heroesEqual, "Failed to save or load heroes");
             //Assert
-            //Assert.AreEqual(expectedHeroes, actualHeroes, "Failed to save or load heroes");
-
-            /*if (expectedHeroes.Count == actualHeroes.Count)
-            {
-                for (int i = 0; i < expectedHeroes.Count; i++)
-                {
-                    if (expectedHeroes[i] != actualHeroes[i])
-                    {
-                        heroesEqual = false;
-                        break;
-                    }
-                }
-            }
-            else
-            {
-                heroesEqual = false;
-            }
-            
-            Assert.IsTrue(heroesEqual, "Failed to save or load heroes");*/
+            Assert.IsTrue(heroesEqual, "Failed to save or load heroes");
         }
     }
 }
