@@ -17,7 +17,7 @@ namespace TableGameAppTests
             statuses.Add(new Status("Might", "3"));
             statuses.Add(new Status("Will", "2"));
 
-            Hero hero = new Hero("Aragorn", statuses, "Has the Mighty Hero special rule");
+            Hero hero = new Hero("Aragorn", statuses, "Has the Mighty Hero special rule", Guid.NewGuid());
 
             List<Hero> expectedHeroes = new List<Hero>();
             expectedHeroes.Add(hero);

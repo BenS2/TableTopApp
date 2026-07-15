@@ -27,6 +27,7 @@ namespace TableGameApp2
         {
             InitializeComponent();
             Model.Model.loadHeroes();
+            Model.Model.loadArmies();
             Navigator.Initialize(MainWindowFrame);
             Navigator.openPage("MainPage");
         }

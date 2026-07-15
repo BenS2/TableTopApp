@@ -77,13 +77,44 @@ namespace TableGameApp2.Pages
             }
         }
 
-        void OnSaveHero(object sender, RoutedEventArgs e)
+        /// <summary>
+        /// Saves all Heroes. If tempSave is true, it won't persist the xml, only save in the model
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <param name="tempSave"></param>
+        void OnSaveHeroes(object sender, RoutedEventArgs e)
+        {
+            saveHeroes(true);
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tempSave"></param>
+        void saveHeroes(bool updateXML = true)
         {
             _currentHero._name = HeroName.Text;
             _currentHero._notes = HeroNotes.Text;
             _currentHero._statuses = _statuses.ToList();
+            if(_currentHero._guid == Guid.Empty)
+                _currentHero._guid = Guid.NewGuid();
+
             Model.Model.addHero(_currentHero);
-            Model.Model.saveHeroes();
+ 
+            if (updateXML == true)
+            {
+                Model.Model.saveHeroes();
+                String message = "";
+                if (_isCreate)
+                    message = "Hero Saved";
+                else
+                    message = "Heroes Updated";
+
+                MessageBoxResult result = MessageBox.Show(message,
+                                              message,
+                                              MessageBoxButton.OK,
+                                              MessageBoxImage.Information);
+            }
         }
 
         /// <summary>
@@ -95,13 +126,22 @@ namespace TableGameApp2.Pages
         {
             ComboBox cmb = sender as ComboBox;
             int selected = SelectHeroCombo.SelectedIndex;
-            OnSaveHero(sender, e);
+
+            //update model, but don't update the xml file when changing heroes
+            saveHeroes(false);
+            
             _currentHero = Model.Model._heroes[selected];
             _statuses = new ObservableCollection<Status>(_currentHero._statuses);
             this.StatusesGrid.ItemsSource = _statuses;
             HeroName.Text = _currentHero._name;
             HeroNotes.Text = _currentHero._notes;
             StatusesGrid.Items.Refresh();
+        }
+
+        bool hasCurrentHeroChanged()
+        {
+            return _currentHero._name != HeroName.Text || _currentHero._notes != HeroNotes.Text 
+                || _currentHero._statuses != _statuses.ToList();
         }
     }
 }

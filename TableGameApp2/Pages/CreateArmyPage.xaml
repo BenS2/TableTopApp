@@ -8,7 +8,22 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="CreateArmyPage">
 
-    <Grid>
-        
-    </Grid>
+    <Canvas Margin="0,0,10,0">
+        <DataGrid  Canvas.Left="27" Canvas.Top="84" Width="305">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Hero Name" Binding = "{Binding statusName}"  />
+               
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid  Canvas.Left="480" Canvas.Top="84" Width="300">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Hero Name" Binding = "{Binding statusName}"  />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Army Name" HorizontalAlignment="Left" Margin="27,48,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name = "SelectArmyCombo" HorizontalAlignment="Left" Margin="27,13,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Margin="156,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Name="SaveArmies" Content="Save Army" Canvas.Left="358" Canvas.Top="324"/>
+
+    </Canvas>
 </Page>

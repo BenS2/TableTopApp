@@ -13,7 +13,7 @@ namespace TableGameAppTests
             expectedStatuses.Add(new Status("Might", "3"));
             expectedStatuses.Add(new Status("Will", "2"));
 
-            Hero hero = new Hero("Aragorn", expectedStatuses, "Has the Mighty Hero special rule");
+            Hero hero = new Hero("Aragorn", expectedStatuses, "Has the Mighty Hero special rule", Guid.NewGuid());
 
             //Act
             List<Status> currentStatuses = hero.getStatuses();
@@ -27,7 +27,7 @@ namespace TableGameAppTests
         {
             //Arrange
             String expectedNotes = "Has the Mighty Hero special rule";
-            Hero hero = new Hero("Aragorn", new List<Status>(), expectedNotes);
+            Hero hero = new Hero("Aragorn", new List<Status>(), expectedNotes, Guid.NewGuid());
 
             //Act
             String actualHeroNotes = hero._notes;
@@ -42,7 +42,7 @@ namespace TableGameAppTests
         {
             //Arrange
             String expectedName = "Aragorn";
-            Hero hero = new Hero("Aragorn", new List<Status>(), expectedName);
+            Hero hero = new Hero("Aragorn", new List<Status>(), expectedName, Guid.NewGuid());
 
             //Act
             String actualHeroName = hero._name;

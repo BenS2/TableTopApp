@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TableGameApp2.Data;
+using TableGameApp2.Model;
 
 namespace TableGameApp2.Pages
 {
@@ -20,9 +23,16 @@ namespace TableGameApp2.Pages
     /// </summary>
     public partial class CreateArmyPage : Page
     {
+        ObservableCollection<Army> _armies;
         public CreateArmyPage()
         {
             InitializeComponent();
+            _armies = Model.Model.getArmies();
+            this.SelectArmyCombo.ItemsSource = Model.Model._armies;
+            SelectArmyCombo.DisplayMemberPath = "_armyName";
+
+
+
         }
     }
 }

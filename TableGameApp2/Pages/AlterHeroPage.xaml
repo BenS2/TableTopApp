@@ -18,7 +18,7 @@
                 <DataGridTextColumn Header="Status Value" Binding = "{Binding statusValue}"  />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="SaveHero" Content="Save Hero" Click = "OnSaveHero" HorizontalAlignment="Left" VerticalAlignment="Center" Width="165" RenderTransformOrigin="0.481,6.78" Height="46" Canvas.Left="426" Canvas.Top="284"/>
+        <Button Name="SaveHeroes" Content="Save Heroes" Click = "OnSaveHeroes" HorizontalAlignment="Left" VerticalAlignment="Center" Width="165" RenderTransformOrigin="0.481,6.78" Height="46" Canvas.Left="426" Canvas.Top="284"/>
         <TextBox Name = "HeroNotes" AcceptsReturn="True" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="276" Height="208" Canvas.Left="590" Canvas.Top="71"/>
         <Label Content="Hero Notes" Canvas.Left="590" Canvas.Top="44" RenderTransformOrigin="-0.553,0.327" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
