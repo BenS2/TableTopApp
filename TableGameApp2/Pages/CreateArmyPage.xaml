@@ -9,21 +9,24 @@
       Title="CreateArmyPage">
 
     <Canvas Margin="0,0,10,0">
-        <DataGrid  Canvas.Left="27" Canvas.Top="84" Width="305">
+        <DataGrid Name = "ArmyHeroes"  Canvas.Left="27" Canvas.Top="84" Width="305" SelectionUnit="Cell" AutoGenerateColumns = "False" HorizontalAlignment="Center" Height="191" VerticalAlignment="Top">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Hero Name" Binding = "{Binding statusName}"  />
-               
+                <DataGridTextColumn Header="Hero Name" Binding = "{Binding _name}"  />
+
             </DataGrid.Columns>
         </DataGrid>
-        <DataGrid  Canvas.Left="480" Canvas.Top="84" Width="300">
+        <DataGrid Name = "NonArmyHeroes" Canvas.Left="480" Canvas.Top="84" Width="300" HorizontalAlignment="Center" Height="191" VerticalAlignment="Top" AutoGenerateColumns = "False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Hero Name" Binding = "{Binding statusName}"  />
+                <DataGridTextColumn Header="Hero Name" Binding = "{Binding _name}"  />
             </DataGrid.Columns>
         </DataGrid>
         <Label Content="Army Name" HorizontalAlignment="Left" Margin="27,48,0,0" VerticalAlignment="Top"/>
-        <ComboBox Name = "SelectArmyCombo" HorizontalAlignment="Left" Margin="27,13,0,0" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="156,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Button Name="SaveArmies" Content="Save Army" Canvas.Left="358" Canvas.Top="324"/>
+        <ComboBox SelectionChanged = "selectArmy" Name = "SelectArmyCombo" HorizontalAlignment="Left" Margin="27,13,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBox Name="ArmyName" HorizontalAlignment="Left" Margin="156,48,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Name="SaveArmy" Click="OnSaveArmy" Content="Save Army" Canvas.Left="358" Canvas.Top="324"/>
+        <Button Name = "AddHero" Click = "OnAddHero"  Content="&lt;" Canvas.Left="388" Canvas.Top="144" HorizontalAlignment="Left" VerticalAlignment="Center" Width="51"/>
+        <Button Name = "RemoveHero" Click = "OnRemoveHero" Content=">" Canvas.Left="388" Canvas.Top="186" HorizontalAlignment="Left" VerticalAlignment="Center" Width="51"/>
+        <Button Name = "NewArmy" Content="New Army" Click = "OnNewArmy" Canvas.Left="439" Canvas.Top="324"/>
 
     </Canvas>
 </Page>

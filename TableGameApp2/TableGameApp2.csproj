@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="DataAccessors\ArmyController.cs" />
     <Compile Include="DataAccessors\XMLAccessor.cs" />
     <Compile Include="Data\Army.cs" />
     <Compile Include="Data\Hero.cs" />
